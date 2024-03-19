@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/Homepage.dart';
+import 'package:myapp/widgets/cartitem.dart';
+import 'package:provider/provider.dart';
+
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => CartProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget{

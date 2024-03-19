@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +6,8 @@ class AppBarWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical:15,
-        horizontal:15
+      padding: EdgeInsets.only(
+        top: 10,left: 10,right: 10,bottom: 8
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,7 +32,7 @@ class AppBarWidget extends StatelessWidget{
             ),
           ),
           Text(
-            "ZOMATO",
+            "PARADISE",
             style: TextStyle(
               color: Color.fromARGB(255, 243, 152, 16),
               fontSize: 20,
