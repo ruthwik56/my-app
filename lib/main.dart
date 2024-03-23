@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/HomePage.dart';
+import 'package:myapp/LoginOrRegister.dart';
+import 'package:myapp/LoginPage.dart';
 import 'package:myapp/widgets/cartitem.dart';
 import 'package:provider/provider.dart';
 
@@ -22,9 +24,7 @@ class MyApp extends StatelessWidget{
       theme: ThemeData(
         scaffoldBackgroundColor: Color.fromARGB(255, 230, 227, 227)
       ),
-      routes: {
-        "/" :(context)=> SplashScreen(),
-      },
+      home: SplashScreen(),
     );
   }
 }
@@ -42,12 +42,10 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 2),(){
       // Navigate to the main screen
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => HomePage(),)
-      );
+        MaterialPageRoute(builder: (context) => LoginOrRegister(),
+      ));
     });
   }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
