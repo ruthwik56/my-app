@@ -1,6 +1,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/LoginPage.dart';
+import 'package:myapp/OrdersPage.dart';
 
 class DrawerWidget extends StatelessWidget{
   @override
@@ -21,6 +23,9 @@ class DrawerWidget extends StatelessWidget{
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>OrdersPage()));
+              },
               leading: Icon(
                 CupertinoIcons.bag,
                 color: Color.fromARGB(255, 243, 152, 16),
@@ -28,6 +33,11 @@ class DrawerWidget extends StatelessWidget{
               title: Text("Orders",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage(onTap: () {
+                  
+                },)));
+              },
               leading: Icon(
                 Icons.exit_to_app,
                 color: Color.fromARGB(255, 243, 152, 16),

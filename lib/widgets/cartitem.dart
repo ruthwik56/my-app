@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart';
 
 class CartItem {
   final String name;
@@ -49,5 +50,32 @@ class CartProvider extends ChangeNotifier {
       _items[index].quantity--;
       notifyListeners();
     }
+  }
+  String _formatPrice(double price){
+    return "\₹${price.toStringAsFixed(2)}";
+  }
+  String _formatitems(List<CartItem> _items){
+    return _items.map((items) => "${items.name}(${_formatPrice(items.price)})").join("");
+  }
+  String displayCartBill(){
+    final bill = StringBuffer();
+    //bill.writeln("Here's your receipt");
+    bill.writeln();
+
+    String formattedDate = DateFormat ('dd-MM-yyyy HH:mm') .format(DateTime.now());
+    bill.writeln(formattedDate);
+    bill.writeln();
+    bill.writeln("Here's your receipt");
+    bill.writeln("------------------");
+
+    for (final items in _items){
+      bill.writeln("${items.quantity}x ${items.name}-${_formatPrice(items.price)}");
+      
+    }
+    bill.writeln("------------------");
+    bill.writeln();
+    bill.writeln("Total price: ${_formatPrice(totalAmount)}");
+
+    return bill.toString();
   }
 }

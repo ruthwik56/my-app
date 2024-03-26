@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/PaymentPage.dart';
 import 'package:myapp/widgets/cartitem.dart';
 import 'package:provider/provider.dart';
 
@@ -6,7 +7,7 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CartItem> cartItems = Provider.of<CartProvider>(context).items;
+    List<CartItem> Items = Provider.of<CartProvider>(context).items;
 
     return Scaffold(
       appBar: AppBar(
@@ -14,9 +15,9 @@ class CartPage extends StatelessWidget {
         title: Text('Cart'),
       ),
       body: ListView.builder(
-        itemCount: cartItems.length,
+        itemCount: Items.length,
         itemBuilder: (context, index) {
-          CartItem item = cartItems[index];
+          CartItem item = Items[index];
           return Container(
             margin: EdgeInsets.only(top: 15,left: 15,right: 15,bottom: 5),
             decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(25)),
@@ -86,7 +87,9 @@ class CartPage extends StatelessWidget {
             ),
             
             ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentPage()));
+              },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Color.fromARGB(255, 243, 152, 16))
               ),

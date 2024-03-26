@@ -80,6 +80,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_credit_card",
+      "rootUri": "file:///Users/ruthwik/work/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_credit_card-3.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_svg",
       "rootUri": "file:///Users/ruthwik/work/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.22.0",
       "packageUri": "lib/",
@@ -112,6 +118,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///Users/ruthwik/work/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/ruthwik/work/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.18.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -344,7 +356,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2024-03-18T10:40:55.631585Z",
+  "generated": "2024-03-25T06:39:07.372924Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
